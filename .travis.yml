@@ -1,5 +1,5 @@
 image: cypress/base:10
-
+language: node_js
 stages:
   - test
 test:
