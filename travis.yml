@@ -1,10 +1,10 @@
 language: node_js
 node_js:
-
--   "8.9"
+  - 'lts/*'
     cache:
-    directories: - ~/.npm - node_modules
+    directories:
+    - node_modules
     install:
--   npm install
+    - npm install
     script:
--   npm run cypress:ci
+    - npm run cypress:ci
