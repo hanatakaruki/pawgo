@@ -2,10 +2,14 @@ image: cypress/base:10
 language: node_js
 node_js:
   - 14
+addons:
+  apt:
+    packages:
+    - libgconf-2-4
 stages:
   - test
 test:
   stage: test
   script:
     - npm install
-    - npx run runHeadless
+    - npm run runHeadless
