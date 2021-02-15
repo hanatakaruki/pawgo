@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "./node_modules/.bin/cypress open",
-    "cy:run": "./node_modules/.bin/cypress run"
+    "runHeaded": "./node_modules/.bin/cypress run --headed --bowser chrome",
+    "runHeadless": "./node_modules/.bin/cypress run --headless"
   },
   "keywords": [],
   "author": "",
