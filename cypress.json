@@ -1,0 +1,19 @@
+{
+	"chromeWebSecurity": false ,
+	"customerWeb": "http://stg475.pawgo.co",
+    "customerEmail": "bedour@gmail.com",
+    "customerPassword": "test1234",
+    "groomerWeb":"https://staging.petista.com",
+    "groomerEmail":"rowdyboyandme@gmail.com",
+    "groomerPassword":"1cclMxpKJXkdgasphWV3pEAm",
+    "adminWeb":"https://pawgostaging.staging.wpengine.com/wp-login.php?loggedout=true",
+    "adminUsername":"adwpadmin",
+    "adminPassword":"Pawgogalloper@102",
+	"viewportWidth": 1091,
+	"viewportHeight": 667,
+    "pageLoadTimeout": 900000,
+    "defaultCommandTimeout": 100000,
+    "responseTimeout":60000,
+	"adminEmail": "dev@pawgo.co",
+	"adminEmailPassword": "ded8pgz9m2y34fsseahn"
+}

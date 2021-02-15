@@ -1,0 +1,20 @@
+{
+  "name": "pawgo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "./node_modules/.bin/cypress open",
+    "cy:run": "./node_modules/.bin/cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^6.4.0",
+    "cypress-file-upload": "^5.0.2",
+    "cypress-xpath": "^1.6.2",
+    "faker": "^5.4.0"
+  }
+}
