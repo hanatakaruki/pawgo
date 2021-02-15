@@ -1,10 +1,15 @@
-language: node_js
-node_js:
-  - 'lts/*'
-    cache:
-    directories:
-    - node_modules
-    install:
-    - npm install
-    script:
-    - npm run cypress:ci
+{
+  "language": "node_js",
+  "os": [
+    "linux"
+  ],
+  "dist": "xenial",
+  "node_js": [
+    "lts/*"
+  ],
+  "cache": {
+    "directories": [
+      "node_modules"
+    ]
+  }
+}
