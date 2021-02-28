@@ -1,5 +1,5 @@
-import '../../../../support/7_critical_test/AdminTest/adminmessages'
-import '../../../../support/7_critical_test/AdminTest/adminreport'
+import '../../../support/7_critical_test/AdminTest/adminmessages'
+import '../../../support/7_critical_test/AdminTest/adminreport'
 
 context('Functional test for admin', () => {
 	
