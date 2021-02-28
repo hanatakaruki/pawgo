@@ -6,8 +6,7 @@
   "scripts": {
     "test": "cypress run --headless",
     "runHeadless": "./node_modules/.bin/cypress run --headless",
-    "runHeaded": "./node_modules/.bin/cypress run --headed --browser chrome",
-    "cy:run": "cypress run --headless"
+    "runHeaded": "./node_modules/.bin/cypress run --headed --browser chrome"
   },
   "keywords": [],
   "author": "",
