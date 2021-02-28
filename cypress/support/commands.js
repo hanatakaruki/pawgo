@@ -27,12 +27,11 @@ import 'cypress-file-upload';
 
 Cypress.Commands.add('CustomerLogin', () => {
   cy.visit(Cypress.config('customerWeb'))
-  cy.wait(5000)
   cy.contains('Login').click()
-  cy.get('[class="base-input text-input"]').type(Cypress.config('customerEmail')).wait(1000).should('have.value', Cypress.config('customerEmail'))
-  cy.get('[type="password"]').type(Cypress.config('customerPassword')).should('have.value', Cypress.config('customerPasswor'))
+  cy.get('[class="base-input text-input"]').type(Cypress.config('customerEmail'))
+  cy.get('[type="password"]').type(Cypress.config('customerPassword'))
   cy.get('[class="button button--block button--fill button--lg button--primary"]').click()
-  cy.wait(5000)
+  cy.wait(6000)
   })
 
 Cypress.Commands.add('GroomerLogin', () => {

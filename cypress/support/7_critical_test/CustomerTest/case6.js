@@ -1,0 +1,10 @@
+Cypress.Commands.add('case6', () => {
+    cy.CustomerLogin()
+    cy.get('[title="Upcoming"]').click()
+    cy.get('[style=""] > :nth-child(1) > :nth-child(1) > .customer-appointments__buttons > :nth-child(1)').click()
+    cy.get('.card > .button--fill').click()
+    cy.get(':nth-child(3) > .svg-icon').click()
+    cy.get('[data-v-23eff630=""][style=""] > .button').click()
+    cy.wait(3000)
+    cy.get('.card').should('be.visible')
+})
