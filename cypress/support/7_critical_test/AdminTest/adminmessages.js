@@ -1,6 +1,7 @@
 Cypress.Commands.add('adminmessages', (Name, Adress, State, phoneNumber, Email, Message) => {
     cy.contains('Messages').click()
-    cy.contains(Name).click().wait(4000)
+    cy.get('#search-customers').type(Name).wait(200).type('{enter}')
+    cy.get('#search-results-container > .customer-card').click().wait(4000)
     cy.get('.customer-info__name').should('have.text', Name)
     cy.get('.d-block > a').should('have.text', Adress)
     cy.get(':nth-child(2) > .d-block').should('have.text', State)

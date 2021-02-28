@@ -27,7 +27,7 @@ context('Functional test for customer', () => {
       cy.case4()
     })
 
-    it('Customer can book service with multiple pet and multiple service and pay with credit car',() =>{
+    it('Customer can book service with multiple pet and multiple service and pay with credit card',() =>{
         cy.case5(creditCardNumber,creditVCC)
     })
 

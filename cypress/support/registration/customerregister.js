@@ -2,13 +2,12 @@ Cypress.Commands.add('successRegisterNewCustomer', (Address, Breed, Petname,
     BirthYear, Gender, PetNotes, FirstName, LastName, Email,
     MobileNumber, Password, HearAboutPawgo, AddressDetail) => {
     cy.visit(Cypress.config('customerWeb'))
-    cy.wait(7000)
   	cy.get('input[name="addressSearch"]').type(Address)
     .wait(5000).type('{downarrow}').wait(2000).type('{enter}').wait(2000)
     cy.contains('Pets & Services').click().wait(7000)
     cy.get('.multiselect__placeholder').click().wait(1000)
     cy.contains(Breed).click()
-    cy.get(':nth-child(8) > .checkbox-component__control').click()
+    cy.get(':nth-child(4) > .checkbox-component__control').click()
     cy.contains('Prices').click()
     cy.get('.list-groomer-profile__name').then(function($elem) {
         cy.log($elem.text())
@@ -41,5 +40,4 @@ Cypress.Commands.add('successRegisterNewCustomer', (Address, Breed, Petname,
     cy.get('.cart-appointment-summary > :nth-child(2)').then(function($elem) {
         cy.log($elem.text())
    })
-
 })
