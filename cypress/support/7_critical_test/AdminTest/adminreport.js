@@ -21,7 +21,4 @@ Cypress.Commands.add('adminreport', (TodayDate) => {
     cy.get('button').contains('Run Report').click().wait(3000)
     cy.get('#printContent').should('be.visible')
     cy.get('.btn-sm').click()
-
-    
-
 })

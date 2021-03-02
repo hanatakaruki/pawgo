@@ -5,7 +5,19 @@ Cypress.Commands.add('case1', () => {
     cy.get('.card > .button--fill').click().wait(3000)
     
     cy.contains('Prices').scrollIntoView().click().wait(5000)
-    cy.contains('Book now').click()
+
+    cy.get('button').then(($btn) => {
+        if ($btn.text() == 'Book now') {
+            cy.contains('Book now').click()
+        } else {
+            var Number = Math.floor(Math.random() * 3) + 1
+            for(let i = 0; i < Number; i++){
+                cy.get(':nth-child(3) > .svg-icon').click()
+                cy.wait(4000)
+            }
+            cy.contains('Next').click()
+        }     
+    })
     cy.wait(5000)
     cy.get(':nth-child(1) > .heading > .future-appointments-form__day-checkbox-wrapper > .checkbox-component > .checkbox-component__control').click()
     cy.contains('Next').scrollIntoView().click()

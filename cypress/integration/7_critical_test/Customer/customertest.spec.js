@@ -10,6 +10,7 @@ context('Functional test for customer', () => {
     var faker = require('faker');
     var creditCardNumber = faker.finance.creditCardNumber();
     var creditVCC = faker.finance.creditCardCVV();
+    //var zipCode = faker.address.zipCode();
       
     it('Customer can rebook one service for one pet with same groomer and pay with paylater', () => {
       cy.case1()

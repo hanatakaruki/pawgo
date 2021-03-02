@@ -6,9 +6,19 @@ Cypress.Commands.add('case2', () => {
     cy.xpath('//div[@class="checkout-pets-and-services__add-edit-services-btn"]').first().click(3000)
     cy.get('.modal__backdrop > .container > .card > .form > .service-selector > :nth-child(3) > .checkbox-component__control').click()
     cy.get('.add-pet-form__actions > .button').scrollIntoView().click()
-    
     cy.contains('Prices').scrollIntoView().click().wait(5000)
-    cy.contains('Book now').scrollIntoView().click()
+    cy.get('button').then(($btn) => {
+        if ($btn.text() == 'Book now') {
+            cy.contains('Book now').click()
+        } else {
+            var Number = Math.floor(Math.random() * 3) + 1
+            for(let i = 0; i < Number; i++){
+                cy.get(':nth-child(3) > .svg-icon').click()
+                cy.wait(4000)
+            }
+            cy.contains('Next').click()
+        }     
+    })
     cy.wait(5000)
     cy.get(':nth-child(1) > .heading > .future-appointments-form__day-checkbox-wrapper > .checkbox-component > .checkbox-component__control').click()
     cy.contains('Next').scrollIntoView().click()

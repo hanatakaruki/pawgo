@@ -3,8 +3,12 @@ Cypress.Commands.add('case6', () => {
     cy.get('[title="Upcoming"]').click()
     cy.get('[style=""] > :nth-child(1) > :nth-child(1) > .customer-appointments__buttons > :nth-child(1)').click()
     cy.get('.card > .button--fill').click()
-    cy.get(':nth-child(3) > .svg-icon').click()
-    cy.get('[data-v-23eff630=""][style=""] > .button').click()
-    cy.wait(3000)
+    var Number = Math.floor(Math.random() * 4) + 1
+    for(let i = 0; i < Number; i++){
+        cy.get(':nth-child(3) > .svg-icon').click()
+        cy.wait(4000)
+    }
+    cy.contains('Submit').click()
+    cy.wait(5000)
     cy.get('.card').should('be.visible')
 })

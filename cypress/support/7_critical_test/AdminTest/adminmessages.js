@@ -8,7 +8,7 @@ Cypress.Commands.add('adminmessages', (Name, Adress, State, phoneNumber, Email, 
     cy.get('[href="tel:4802134768"]').should('have.text', phoneNumber)
     cy.get('[href="mailto:hmwilliams@mpsaz.org"]').should('have.text', Email)
     cy.xpath('//span[contains(.,"Ellie: ChihuahuaBella: MalteseSophie: Yorkshire TerrierSophie: Yorkshire TerrierBella: MalteseBella: MaltesePhoebe: Schnauzer (min)Leila: Chihuahua")]').should('be.visible') 
-    // cy.get('#message').type(Message).wait(100).type('{enter}')
-    // cy.contains(Message).should('be.visible') 
+    cy.get('#message').type(Message).wait(100).type('{enter}')
+    cy.contains(Message).should('be.visible') 
 
 })
