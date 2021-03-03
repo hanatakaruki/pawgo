@@ -16,27 +16,17 @@ Cypress.Commands.add('case5', (creditCardNumber,creditVCC) => {
 
     cy.contains('Prices').scrollIntoView().click().wait(5000)
     
-    cy.get('button').then(($btn) => {
-        if ($btn.text() == 'Book now') {
-            cy.contains('Book now').click()
-        } else {
-            var Number = Math.floor(Math.random() * 3) + 1
-            cy.get(':nth-child('+Number+') > .list-groomer-profile > .list-groomer-profile__cta > .button').click()
-        }   
-    })
-
-    cy.get('button').then(($btn) => {
-        if ($btn.text() == 'Book now') {
-            cy.contains('Book now').click()
-        } else {
+    cy.get(':nth-child(1) > .list-groomer-profile > .list-groomer-profile__cta > .button').then($schedule => {
+        if ($schedule.is(':visible')){
+            cy.get(':nth-child(1) > .list-groomer-profile > .list-groomer-profile__cta > .button').click()
             var Number = Math.floor(Math.random() * 3) + 1
             for(let i = 0; i < Number; i++){
                 cy.get(':nth-child(3) > .svg-icon').click()
                 cy.wait(4000)
             }
             cy.contains('Next').click()
-        }     
-    })
+    }})
+
 
     cy.wait(5000)
     cy.contains('Next').scrollIntoView().click()

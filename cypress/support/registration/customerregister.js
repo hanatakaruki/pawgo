@@ -14,7 +14,7 @@ Cypress.Commands.add('successRegisterNewCustomer', (Address, Breed, Petname,
     })
     cy.contains('Book now').click()
     cy.wait(5000)
-    cy.get(':nth-child(1) > .heading > .future-appointments-form__day-checkbox-wrapper > .checkbox-component > .checkbox-component__control').click()
+    //cy.get(':nth-child(1) > .heading > .future-appointments-form__day-checkbox-wrapper > .checkbox-component > .checkbox-component__control').click()
     cy.contains('Next').scrollIntoView().click()
     cy.wait(5000)
     cy.get('.base-input__input').type(Petname)
