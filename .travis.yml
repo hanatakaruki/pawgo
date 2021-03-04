@@ -11,5 +11,6 @@ stages:
 test:
   stage: test
   script:
+    - npm update
     - npm install
     - npx cypress run
